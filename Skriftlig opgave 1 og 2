@@ -1,0 +1,49 @@
+
+What Is a Hypervisor?
+Hvad er en Hypervisor?
+
+Der findes to typer af hypervisor: Type 1 og Type 2.
+Type 1 benytter direkte hostens fysiske hardware, og har direkte adgang til dens ressourcer.
+Type 2 er et software layer som installeres på et operativsystem, og køres gennem det, som et program.
+Overordnet er en hypervisor, en teknologi som gør det muligt at virtualisere hardware, med alle de nødvendige funktioner til at kunne virke ligesom det fysiske, bare uden at det er fysisk. Dette sker gennem en compute-host, hvilket f.eks., en computer. Fra hosten kan man monitorere, styre, tilføje og fjerne virtuelle maskiner. Ved tilføjelse af virtuelle maskiner, opdeler man hostens ressourcer til dem, og derfor er compute-hostens tre vigtigste dele er CPU(er), RAM og netværk. CPUen/erne skal bearbejde tingene, være i stand til at lagre dem midlertidigt (RAM), og internet for at kunne forbinde til hinanden, hvilket er derfor at gæsterne ikke behøver at være det samme sted. Lagerplads er også en mulighed for virtualisering, men det er ikke essentiel. Igennem virtualisering er det endda muligt at tildele gæsterne forskellige operativsystemer, hvori at de ikke behøver at være det samme som hosten selv. Hypervisore bliver generelt brugt i data-centre, samt andre server-baseret omgivelser. Udover dette kan det også blive brugt til at teste skadelig data/filer/vira, osv., i dets selvomfangende beskyttet, isoleret environment. Dog skal man altid være forsigtig, når det kommer til vira, og man kan læse op på, f.eks., ”virtual machine escape”.
+Kendte hypervisore er f.eks., VMware, VirtualBox, osv. 
+Hvorfor er Virtuelt miljø smart?
+
+Noget smart med en virtuel maskine er at man kan prøve kræfter med sine projekter uden at ødelægge ens styresystem. Testning af f.eks. gamle programmer og se om der stadig er kompatibilitet med de andre eller nyere styresystemer.
+
+Noget smart ved et virtuelt miljø, er at det er så tilgængeligt, det er for det meste også nemmere og hurtigere og arbejde i et virtuelt miljø, fordi man kan nemt og hurtigt for kontakt til en person som måske kunne side på den anden side af verdenen.
+
+Et virtuelt miljø på f.eks. en arbejdsplads kan gøre at det er nemmere at dele sine projekter med andre, eller nemmere og samarbejde om et projekt.
+
+Noget der kan både være smart og ikke så smart er virtuelle værktøjer, de skal ses på som f.eks cisco packet tracer kan man simulere hvordan et server rack kan sættes op, men når det så kommer til og gøre det i virkeligheden er der en god forskel. Nogle gange er der short-cuts i packet tracer, som man ikke kan bruge på en virkelig router, og omvendt, så virtuelle værktøjer kan hjælpe en med at blive guidet hen mod den rette retning, men man vil støde på nogen forskel når man så skal gøre det fysisk.
+
+
+
+Computerteknologi 2
+
+Hvorfor skal man kunne slukke front end USB på en server?
+Det er en ekstra sikkerhed at slukke for front end usb på en server, sådan så en person med onde hensigter ikke ville kunne tilkoble et usb stik med malware på.
+
+Hvad betyder Legacy boot mode?
+Ordet "legacy" i computer sammenhæng,  til gamle systemer der er ved at blive udfaset, men som ikke er helt døde endnu.
+
+BIOS’en er et legacy boot system/program, der bruges til at starte computeren når man tænder for den. Den håndterer også dataflow mellem operativsystem og hardware (mus, Tastatur, Printer, Diske, etc.)
+
+Biosen har 4 funktioner: 
+1. POST: Når BIOS’en starter computeren, tester den først hardwaren.’
+2. Bootstrap Loader: Derefter lokaliserer den operativsystemet.
+3. Når operativsystemet er startet, lokaliserer den Software og Drivers, der forbinder til operativsystemet.
+4. CMOS setup: Giver brugeren mulighed for at konfigurere hardware og system settings. (CMOS er navnet på BIOSens hukommelse. Denne hukommelse slettes ikke når computeren slukkes, den er altså ikke “volatile”.)
+
+Hvad betyder UEFI boot mode?
+UEFI er ligesom BIOS et boot system, der starter computerens system op når computeren bliver tændt og håndterer datastrømmen mellem operativsystem og firmware/hardware. (Firmware er de faste, små programmer der ligger på din hardware, det kunne f.eks. være det system der styrer lyset i din mus, hvis ikke dette kan håndteres af en driver.)
+
+UEFI har mange funktioner, som BIOSen ikke besidder, den tillader større diske, hurtigere boot tider og meget mere.
+
+UEFI lægger alle sine boot information på en .efi fil som er gemt på EFI system partitionen, på din disk. ESP partitionen indeholder også bootloader programmer til det operativsystem der er installeret på disken.
+
+UEFI behøver ikke teste hardwaren før den starter.
+
+Hvad er forskellen?
+BIOS er som skrevet tidligere i teksten, en ældre teknologi end UEFI. BIOS er skrevet i assembler, hvorimod UEFI er skrevet i C. BIOS fungerer med 16-bit-tilstand, det vil altså sige at BIOS kun kan adressere 1 MB eksekverbar hukommelse. UEFI kan på den anden side køre 64-bit-tilstand, som altså betyder at den har mere adresserbar plads end BIOS, hvilket gør opstartsprocessen hurtigere. Udover denne klare fordel, så kan UEFI også starte fra et meget større drev. Bios kan kun starte op fra et drev med 2.2TB eller mindre, hvorimod UEFI’s teoretiske grænse ligger på 9.4 Zettabytes(1ZB = 1000 exabytes = 1921 bytes)
+
